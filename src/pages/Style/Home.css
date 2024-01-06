@@ -5,15 +5,8 @@
     justify-content: center;
 }
 
-.socials {
-    display: inline;
-}
-
-#socialDiv {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transform: translateX(20%);
+.centeredText {
+    text-align: center;
 }
 
 #timeDiv {
@@ -27,6 +20,62 @@
     padding: 25px;
 }
 
-.centeredText {
-    text-align: center;
+.socials {
+    display: inline;
+}
+
+#socialDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: translateX(20%);
+}
+
+.emailText {
+    display: inline;
+    padding: 5px 15px;
+}
+
+#emailDiv {
+    padding: 15px 0px;
+}
+
+.emailItem1, .emailItem2 {
+    display: inline;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.emailItem1 {
+    display: inline-block;
+    padding: 5px 25px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+    border: #fff solid 0.5px;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.emailItem1:hover {
+    background-color: #242424;
+    color: #fff;
+}
+
+.emailItem2 {
+    display: inline-block;
+    padding: 5px 25px;
+    background-color: #242424;
+    color: #fff;
+    border-radius: 5px;
+    border: #fff solid 0.5px;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.emailItem2:hover {
+    background-color: #fff;
+    color: #000;
 }

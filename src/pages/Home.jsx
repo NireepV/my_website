@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import './style/Home.css'
 import myPicture from '../assets/myHeadshot.png';
+
+const email = "Nireep.Vishnubhatla@gmail.com";
 
 function formatTime(date) {
   return date.toLocaleTimeString('en-AU', {
@@ -14,6 +16,10 @@ function formatTime(date) {
 
 const Home = () => {
   const [time, setTime] = useState(formatTime(new Date()));
+
+  const copyEmailToClipboard = () => {
+    navigator.clipboard.writeText(email);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -45,9 +51,10 @@ const Home = () => {
         </div>
         <div id='emailDiv'>
           <a href="/contactMe">
-            <li className='socials'>Contact Me</li>
+            <li className='emailItem1'>Contact Me &#128225;</li>
           </a>
-          <li className='socials'>Copy Email</li>
+          <p className='emailText'>or</p>
+          <li className='emailItem2' onClick={copyEmailToClipboard}>Copy Email &#128233;</li>
         </div>
         <div><h4 className="centeredText">Coordinates</h4></div>
       </div>
