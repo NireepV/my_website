@@ -1,5 +1,7 @@
 import React, { useState, useEffect} from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 import './style/Home.css'
+import 'react-toastify/dist/ReactToastify.css';
 import myPicture from '../assets/myHeadshot.png';
 
 const email = "Nireep.Vishnubhatla@gmail.com";
@@ -18,7 +20,9 @@ const Home = () => {
   const [time, setTime] = useState(formatTime(new Date()));
 
   const copyEmailToClipboard = () => {
-    navigator.clipboard.writeText(email);
+    navigator.clipboard.writeText(email).then(() => {
+      toast.success('Copied to Clipboard');
+    });
   };
 
   useEffect(() => {
@@ -33,6 +37,7 @@ const Home = () => {
 
   return (
     <div className='mainDiv'>
+      <ToastContainer />
       <div id='timeDiv'>
         <h4 id='time'>{time}</h4>
       </div>
