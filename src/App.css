@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url('pages/style/webfonts/JetBrainsMono-Regular.woff2');
+  src: url('pages/style/webfonts/JetBrainsMono-Regular.woff2') format('woff2')
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -5,4 +11,5 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
+  font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
