@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import './style/Home.css'
 import 'react-toastify/dist/ReactToastify.css';
+import './style/Toast.css'
 import myPicture from '../assets/myHeadshot.png';
 
 const email = "Nireep.Vishnubhatla@gmail.com";
@@ -46,6 +47,7 @@ const Home = () => {
       </div>
       <div className='body'>
         <div><h2 className="centeredText">Nireep Vishnubhatla</h2></div>
+        <div><h3 className="centeredText">Student</h3></div>
         <div id='socialDiv'>
           <a href="https://github.com/NireepV" target="_blank" rel="noopener noreferrer">
             <li className='socials'><img src="src/assets/github.png" className='NavIcon'/></li>
