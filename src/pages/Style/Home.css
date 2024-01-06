@@ -7,16 +7,22 @@
 
 .socials {
     display: inline;
-    padding: 0px 10px;
+}
+
+#socialDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: translateX(20%);
 }
 
 #timeDiv {
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 }
 
 .myHeadshot {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     padding: 25px;
 }

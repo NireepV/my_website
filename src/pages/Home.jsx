@@ -36,11 +36,18 @@ const Home = () => {
       <div className='body'>
         <div><h2 className="centeredText">Nireep Vishnubhatla</h2></div>
         <div id='socialDiv'>
-          <li className='socials'>github</li>
-          <li className='socials'>linkdin</li>
-          <li className='socials'>instagram</li>  
+          <a href="https://github.com/NireepV" target="_blank" rel="noopener noreferrer">
+            <li className='socials'><img src="src/assets/github.png" className='NavIcon'/></li>
+          </a>
+          <a href="https://www.instagram.com/nireepog" target="_blank" rel="noopener noreferrer">
+            <li className='socials'><img src="src/assets/instagram.png" className='NavIcon'/></li>
+          </a> 
         </div>
-        <div>
+        <div id='emailDiv'>
+          <a href="/contactMe">
+            <li className='socials'>Contact Me</li>
+          </a>
+          <li className='socials'>Copy Email</li>
         </div>
         <div><h4 className="centeredText">Coordinates</h4></div>
       </div>
