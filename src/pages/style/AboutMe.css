@@ -1,0 +1,34 @@
+.primDiv{
+    max-height: 100vh;
+}
+
+#firstP {
+    display: flex;
+    justify-content: center;
+}
+
+.justifiedText {
+    text-align: justify;
+}
+
+h3.justifiedText {
+    font-weight: 200;
+}
+
+p.centeredText {
+    text-align: justify;
+    text-align-last: center;
+    max-width: 600px;
+}
+
+.aboutHeadings {
+    text-align: justify;
+    margin-right: 20px;
+}
+
+.txt {
+    display: flex;
+    justify-content: space-between; /* Optional: Adds some space between the heading and the paragraph */
+    align-items: flex-start; /* Optional: Aligns the heading and the paragraph to the top of the div */
+    margin-bottom: 20px; /* Optional: Adds some space below each section */
+}
