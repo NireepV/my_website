@@ -1,8 +1,9 @@
 import React from 'react';
+import './style/AboutMe.css'
 const AboutMe = () =>{
   return (
     <div>
-      <h1>Cats</h1>
+      <h1>About Me</h1>
       <p>This is a paragraph</p>
     </div>
   );
