@@ -81,7 +81,7 @@ const Home = () => {
             <li className='socials'><img src="src/assets/github.png" className='socials'/></li>
           </a>
           <a href="https://www.instagram.com/nireepog" target="_blank" rel="noopener noreferrer">
-            <li className='socials'><img src="src/assets/instagram.png" className='socials'/></li>
+            <li className='socials'><img src="src/assets/Instagram.png" className='socials'/></li>
           </a> 
         </div>
         <div id='emailDiv'>
