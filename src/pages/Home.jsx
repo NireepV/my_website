@@ -78,10 +78,10 @@ const Home = () => {
         <div><h3 className="centeredText">Student</h3></div>
         <div id='socialDiv'>
           <a href="https://github.com/NireepV" target="_blank" rel="noopener noreferrer">
-            <li className='socials'><img src="src/assets/github.png" className='NavIcon'/></li>
+            <li className='socials'><img src="src/assets/github.png" className='socials'/></li>
           </a>
           <a href="https://www.instagram.com/nireepog" target="_blank" rel="noopener noreferrer">
-            <li className='socials'><img src="src/assets/instagram.png" className='NavIcon'/></li>
+            <li className='socials'><img src="src/assets/instagram.png" className='socials'/></li>
           </a> 
         </div>
         <div id='emailDiv'>
