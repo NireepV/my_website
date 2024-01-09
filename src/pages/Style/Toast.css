@@ -1,16 +1,12 @@
-.Toastify__toast-container {
-    bottom: 1.5rem;
-    top: unset;
-}
-
 .Toastify__close-button {
     color: white;
 }
 
 .Toastify__toast {
-    background-color: black;
+    background-color: #242424;
     color: white;
     border-radius: 10px;
+    border: 1px white solid;
     padding: 10px;
     min-height: unset;
     width: auto;

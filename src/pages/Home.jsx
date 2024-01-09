@@ -1,9 +1,10 @@
 import React, { useState, useEffect} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import './style/Home.css'
+import bounty from 'bounty';
 import 'react-toastify/dist/ReactToastify.css';
 import './style/Toast.css'
 import myPicture from '../assets/myHeadshot.png';
+import './style/Home.css'
 
 const email = "Nireep.Vishnubhatla@gmail.com";
 
@@ -12,17 +13,19 @@ function formatTime(date) {
     timeZone: 'Australia/Adelaide',
     hour: '2-digit',
     minute: '2-digit',
-    second: '2-digit',
     hour12: true
   });
 }
 
 const Home = () => {
   const [time, setTime] = useState(formatTime(new Date()));
+  const [coordinates, setCoordinates] = useState('Adelaide ∘ 34.9285° S, 138.6007° E');
 
   const copyEmailToClipboard = () => {
     navigator.clipboard.writeText(email).then(() => {
-      toast.success('Copied to Clipboard');
+      toast.success('Copied to Clipboard', {
+        icon: null
+      });
     });
   };
 
@@ -36,11 +39,38 @@ const Home = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const timeDiv = document.getElementById('timeDiv');
+    if (timeDiv) {
+      bounty({
+        el: timeDiv,
+        value: time,
+        lineHeight: 1.5,
+        letterSpacing: 1.05,
+        styles: {
+          color: '#fff',
+        },
+      });
+    }
+  }, [time]);
+
+  useEffect(() => {
+    const coordinatesDiv = document.getElementById('coordinatesDiv');
+    if (coordinatesDiv) {
+      bounty({
+        el: coordinatesDiv,
+        value: coordinates,
+        lineHeight: 1.5,
+        letterSpacing: 1.05,
+      });
+    }
+  }, [coordinates]);
+
   return (
     <div className='mainDiv'>
       <ToastContainer />
       <div id='timeDiv'>
-        <h4 id='time'>{time}</h4>
+        <h4 id='time' className='animated-text'>{time}</h4>
       </div>
       <div id='photoDiv'>
         <img className='myHeadshot' src={myPicture} alt="Me" />
@@ -63,7 +93,11 @@ const Home = () => {
           <p className='emailText'>or</p>
           <li className='emailItem2' onClick={copyEmailToClipboard}>Copy Email &#128233;</li>
         </div>
-        <div><h4 className="centeredText">Coordinates</h4></div>
+        <div>
+          <div id='coordinatesDiv'>
+            <h4 className='animated-text'>{coordinates}</h4>
+          </div>
+        </div>
       </div>
     </div>
   );

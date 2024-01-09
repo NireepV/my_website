@@ -79,3 +79,8 @@
     background-color: #fff;
     color: #000;
 }
+
+#coordinatesDiv, #timeDiv {
+    display: inline;
+    fill: #fff;
+}
