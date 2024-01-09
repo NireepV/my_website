@@ -26,9 +26,8 @@
 
 #socialDiv {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
-    transform: translateX(20%);
 }
 
 .emailText {
@@ -81,6 +80,6 @@
 }
 
 #coordinatesDiv, #timeDiv {
-    display: inline;
     fill: #fff;
+    text-align: center;
 }
