@@ -74,8 +74,9 @@ const Home = () => {
         <img className='myHeadshot' src={myPicture} alt="Me" />
       </div>
       <div className='body'>
-        <div><h2 className="centeredText">Nireep Vishnubhatla</h2></div>
-        <div><h3 className="centeredText">Student</h3></div>
+        <div><h2 className="centeredText" id='title'>Nireep Vishnubhatla</h2></div>
+        <div><h3 className="centeredText" id='profession'>Aspiring Pen-Tester | Adelaide University</h3></div>
+        <div className='centerDiv'>
         <div id='socialDiv'>
           <a href="https://github.com/NireepV" target="_blank" rel="noopener noreferrer">
             <li className='socials'><img src="src/assets/github.png" className='socials'/></li>
@@ -90,6 +91,7 @@ const Home = () => {
           </a>
           <p className='emailText'>or</p>
           <li className='emailItem2' onClick={copyEmailToClipboard}>Copy Email &#128233;</li>
+        </div>
         </div>
         <div>
           <div id='coordinatesDiv'>
