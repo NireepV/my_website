@@ -1,3 +1,7 @@
+.emptyDiv {
+    padding-bottom: 60px;
+}
+
 .primDiv{
     max-height: 100vh;
 }
@@ -7,11 +11,11 @@
     justify-content: center;
 }
 
-.justifiedText {
-    text-align: justify;
+h2.centeredText {
+    padding-top: 20px;
 }
 
-h3.justifiedText {
+h3.centeredText {
     font-weight: 200;
 }
 

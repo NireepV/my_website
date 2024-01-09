@@ -46,6 +46,7 @@ const AboutMe = () =>{
           possibilities within the realm of computer science together.
         </p>
       </div>
+      <div className='emptyDiv'></div>
     </div>
   );
 }
