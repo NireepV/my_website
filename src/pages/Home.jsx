@@ -23,9 +23,7 @@ const Home = () => {
 
   const copyEmailToClipboard = () => {
     navigator.clipboard.writeText(email).then(() => {
-      toast.success('Copied to Clipboard', {
-        icon: null
-      });
+      toast.success('Copied To Clipboard 🥳🎉');
     });
   };
 

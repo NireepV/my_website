@@ -7,9 +7,9 @@
     color: white;
     border-radius: 10px;
     border: 1px white solid;
-    padding: 10px;
     min-height: unset;
     width: auto;
+    text-align: center;
 }
 
 .Toastify__toast-body {
@@ -19,4 +19,8 @@
 
 .Toastify__progress-bar {
     background: white;
+}
+
+.Toastify__toast-icon {
+    display: none;
 }
