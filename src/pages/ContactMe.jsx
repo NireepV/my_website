@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './style/ContactMe.css';
 
 const ContactMe = () =>{
@@ -40,6 +42,7 @@ const ContactMe = () =>{
   
   return (
     <div className='primDiv'>
+      <ToastContainer />
       <div className='head'>
         <h2 className={`centeredText ${scrollPosition > 50 ? 'small' : 'large'}`}>Contact Me</h2>
         <h3 className={`centeredText ${scrollPosition > 50 ? 'small2' : 'large2'}`}>Let's Get To Know Each Other</h3>
@@ -54,7 +57,7 @@ const ContactMe = () =>{
           <div className='textareaWrapper'>
             <textarea name="content" id="content" cols="30" rows="10" placeholder="Type Away My Fellow Email Enthusist ....." value={formValues.content} onChange={handleInputChange} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} />
           </div>
-          <button className='sendEmail' type='submit'>Send &#128228;</button>
+          <button className='sendEmail' type='submit' onClick={() => toast("Email Has Been Sent! 🥳🎉")}>Send &#128228;</button>
         </div>
         <div className='liveTracking'>
           <h4 className='LTelement'>Watched Values Updated Live:</h4>
