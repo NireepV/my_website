@@ -36,3 +36,51 @@ p.centeredText {
     align-items: flex-start; /* Optional: Aligns the heading and the paragraph to the top of the div */
     margin-bottom: 20px; /* Optional: Adds some space below each section */
 }
+
+
+
+
+.bodyA {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.centeredText {
+    text-align: center;
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+.centeredText.large {
+    margin-bottom: 0;
+    font-size: 3em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.centeredText.small {
+    margin-bottom: 0;
+    font-size: 2em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+
+.centeredText.large2 {
+    margin-bottom: 30px;
+    font-size: 2em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.centeredText.small2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.25em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.bodyA.hidden {
+    opacity: 0;
+    padding-bottom: 20vh;
+}
+  
+.bodyA.visible {
+    opacity: 1;
+    padding-bottom: 20vh;
+}
+  
