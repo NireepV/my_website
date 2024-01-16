@@ -1,5 +1,14 @@
 .head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
     transition: transform 0.3s ease-in-out;
+}
+
+.bodyC {
+    transition: opacity 0.3s ease-in-out;
 }
 
 .centeredText {
@@ -13,7 +22,6 @@
     align-items: center; /* This will center the items horizontally */
     justify-content: center; /* This will center the items vertically */
     flex-grow: 1; /* This will allow the contact div to take up the remaining space */
-    transition: opacity 0.3s ease-in-out;
 }
 
 .details, .textareaWrapper {
@@ -31,6 +39,10 @@
     flex: 1;
     padding: 10px; /* Adjust this value as needed */
     font-size: 16px; /* Adjust this value as needed */
+    color: #fff;
+    background-color: #242424;
+    border: #a0a0a0 2px solid;
+    border-radius: 5px;
 }
 
 .textareaWrapper {
@@ -45,6 +57,10 @@
     font-size: 16px; /* Adjust this value as needed */
     margin: 20px auto; /* This will center the textarea and add a 20px margin at the top and bottom */
     box-sizing: border-box;
+    color: #fff;
+    background-color: #242424;
+    border: #a0a0a0 2px solid;
+    border-radius: 5px;
 }
 
 .centeredText.large {
@@ -71,20 +87,33 @@
     font-size: 1.25em; /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
-  
+ 
+button.sendEmail {
+    width: 100%;
+    color: #242424;
+    background-color: #fff;
+}
 
-.contact {
+button.sendEmail:hover {
+    color: #fff;
+    background-color: #242424;
+    border: #fff 2px solid;
+}
+
+.bodyC {
     transition: opacity 0.3s ease-in-out;
 }
   
-.contact.hidden {
+.bodyC.hidden {
     opacity: 0;
     padding-bottom: 20vh;
+    overflow-x: hidden;
 }
   
-.contact.visible {
+.bodyC.visible {
     opacity: 1;
     padding-bottom: 20vh;
+    overflow-x: hidden;
 }
 
 .primDiv {
@@ -97,4 +126,54 @@
     align-items: center;
     justify-content: center;
     padding-top: 36vh;
+}
+
+.bodyC {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.liveTracking {
+    width: 40vh;
+    margin-left: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+h4.LTelement {
+    margin-bottom: 10px;
+    font-weight: 200;
+}
+
+p.LTelement {
+    margin: 5px 0;
+    font-weight: 100;
+}
+
+.LTelement.bodyContent {
+    white-space: pre-wrap;
+}
+  
+.contact {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(50%);
+}
+
+.contact:focus-within {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(0);
+}
+  
+.liveTracking {
+    transform: translateX(100%); /* Initially hidden */
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+}
+  
+.contact:focus-within ~ .liveTracking {
+    transform: translateX(0); /* Shown when a form field is focused */
+    transition: transform 0.3s ease-in-out;
+    opacity: 1;
 }
