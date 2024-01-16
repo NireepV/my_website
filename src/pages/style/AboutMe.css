@@ -11,11 +11,11 @@
     justify-content: center;
 }
 
-h2.centeredText {
+h2.centeredTextA {
     padding-top: 20px;
 }
 
-h3.centeredText {
+h3.centeredTextA {
     font-weight: 200;
 }
 
@@ -37,39 +37,36 @@ p.centeredText {
     margin-bottom: 20px; /* Optional: Adds some space below each section */
 }
 
-
-
-
 .bodyA {
     transition: opacity 0.3s ease-in-out;
 }
 
-.centeredText {
+.centeredTextA {
     text-align: center;
     margin-top: 20px; /* Adjust this value as needed */
 }
 
-.centeredText.large {
+.centeredTextA.large {
     margin-bottom: 0;
     font-size: 3em; /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
   
-.centeredText.small {
+.centeredTextA.small {
     margin-bottom: 0;
     font-size: 2em; /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
 
-.centeredText.large2 {
-    margin-bottom: 30px;
+.centeredTextA.large2 {
+    margin-bottom: 15px;
     font-size: 2em; /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
   
-.centeredText.small2 {
+.centeredTextA.small2 {
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 1.25em; /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
@@ -83,4 +80,16 @@ p.centeredText {
     opacity: 1;
     padding-bottom: 20vh;
 }
-  
+
+.scrollText {
+    margin: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scrollText.hidden {
+    opacity: 0;
+}
+
+.scrollText.visible {
+    opacity: 1;
+}

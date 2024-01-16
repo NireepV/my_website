@@ -11,7 +11,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-.centeredText {
+.centeredTextC {
     text-align: center;
     margin-top: 20px; /* Adjust this value as needed */
 }
@@ -63,28 +63,30 @@
     border-radius: 5px;
 }
 
-.centeredText.large {
+.centeredTextC.large {
     margin-bottom: 0;
     font-size: 3em; /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
   
-.centeredText.small {
+.centeredTextC.small {
     margin-bottom: 0;
     font-size: 2em; /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
 
-.centeredText.large2 {
-    margin-bottom: 30px;
+.centeredTextC.large2 {
+    margin-bottom: 15px;
     font-size: 2em; /* Adjust this value as needed */
+    font-weight: 200;
     transition: font-size 0.3s ease-in-out;
 }
   
-.centeredText.small2 {
+.centeredTextC.small2 {
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     font-size: 1.25em; /* Adjust this value as needed */
+    font-weight: 200;
     transition: font-size 0.3s ease-in-out;
 }
  
@@ -175,5 +177,18 @@ p.LTelement {
 .contact:focus-within ~ .liveTracking {
     transform: translateX(0); /* Shown when a form field is focused */
     transition: transform 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.scrollText {
+    margin: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scrollText.hidden {
+    opacity: 0;
+}
+
+.scrollText.visible {
     opacity: 1;
 }
