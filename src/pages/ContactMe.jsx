@@ -45,7 +45,7 @@ const ContactMe = () =>{
       <ToastContainer />
       <div className='head'>
         <h2 className={`centeredTextC ${scrollPosition > 50 ? 'small' : 'large'}`}>Contact Me</h2>
-        <h3 className={`centeredTextC ${scrollPosition > 50 ? 'small2' : 'large2'}`}>Let's Get To Know Each Other</h3>
+        <h3 className={`centeredTextC ${scrollPosition > 50 ? 'small2' : 'large2'}`}>Let's Get To Know Each Other....</h3>
         <h4 className={`scrollText ${scrollPosition > 50 ? 'hidden' : 'visible'}`}>scroll down &#11015;</h4>
       </div>
 

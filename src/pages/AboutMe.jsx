@@ -32,7 +32,7 @@ const AboutMe = () =>{
     <div className='primDiv'>
       <div className='head'>
         <h2 className={`centeredTextA ${scrollPosition > 50 ? 'small' : 'large'}`}>About Me</h2>
-        <h3 className={`centeredTextA ${scrollPosition > 50 ? 'small2' : 'large2'}`}>A Few Things You Should Know...</h3>
+        <h3 className={`centeredTextA ${scrollPosition > 50 ? 'small2' : 'large2'}`}>A Few Things You Should Know....</h3>
         <h4 className={`scrollText ${scrollPosition > 50 ? 'hidden' : 'visible'}`}>scroll down &#11015;</h4>
       </div>
 
