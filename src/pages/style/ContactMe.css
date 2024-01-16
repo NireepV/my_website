@@ -1,5 +1,5 @@
 .head {
-    padding-bottom: 50px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .centeredText {
@@ -7,12 +7,13 @@
     margin-top: 20px; /* Adjust this value as needed */
 }
 
-#contact {
+.contact {
     display: flex;
     flex-direction: column;
     align-items: center; /* This will center the items horizontally */
     justify-content: center; /* This will center the items vertically */
     flex-grow: 1; /* This will allow the contact div to take up the remaining space */
+    transition: opacity 0.3s ease-in-out;
 }
 
 .details, .textareaWrapper {
@@ -44,4 +45,56 @@
     font-size: 16px; /* Adjust this value as needed */
     margin: 20px auto; /* This will center the textarea and add a 20px margin at the top and bottom */
     box-sizing: border-box;
+}
+
+.centeredText.large {
+    margin-bottom: 0;
+    font-size: 3em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.centeredText.small {
+    margin-bottom: 0;
+    font-size: 2em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+
+.centeredText.large2 {
+    margin-bottom: 30px;
+    font-size: 2em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.centeredText.small2 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.25em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+
+.contact {
+    transition: opacity 0.3s ease-in-out;
+}
+  
+.contact.hidden {
+    opacity: 0;
+    padding-bottom: 20vh;
+}
+  
+.contact.visible {
+    opacity: 1;
+    padding-bottom: 20vh;
+}
+
+.primDiv {
+ min-height: 100vh;
+}
+
+.head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 36vh;
 }
