@@ -1,0 +1,93 @@
+.primDiv{
+    max-height: 100vh;
+}
+
+h2.centeredTextP {
+    padding-top: 20px;
+}
+
+h3.centeredTextP {
+    font-weight: 200;
+}
+
+.bodyP {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(200px, 1fr)); /* Adjust as needed */
+    gap: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.centeredTextP {
+    text-align: center;
+    margin-top: 20px; /* Adjust this value as needed */
+}
+
+.centeredTextP.large {
+    margin-bottom: 0;
+    font-size: 3em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.centeredTextP.small {
+    margin-bottom: 0;
+    font-size: 2em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+
+.centeredTextP.large2 {
+    margin-bottom: 15px;
+    font-size: 2em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.centeredTextP.small2 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 1.25em; /* Adjust this value as needed */
+    transition: font-size 0.3s ease-in-out;
+}
+  
+.bodyP.hidden {
+    box-sizing: border-box;
+    width: 100%;
+    opacity: 0;
+    padding-bottom: 20vh;
+}
+  
+.bodyP.visible {
+    box-sizing: border-box;
+    width: 100%;
+    opacity: 1;
+    padding-bottom: 20vh;
+}
+
+.scrollText {
+    margin: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scrollText.hidden {
+    opacity: 0;
+}
+
+.scrollText.visible {
+    opacity: 1;
+}
+
+.projectContainer {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px; /* Adjust as needed */
+}
+
+.project {
+    width: 100%;
+    border: 1px solid #ccc; /* Adjust as needed */
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
