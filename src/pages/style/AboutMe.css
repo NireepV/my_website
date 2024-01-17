@@ -73,12 +73,12 @@ p.centeredText {
   
 .bodyA.hidden {
     opacity: 0;
-    padding-bottom: 20vh;
+    padding-bottom: 10vh;
 }
   
 .bodyA.visible {
     opacity: 1;
-    padding-bottom: 20vh;
+    padding-bottom: 10vh;
 }
 
 .scrollText {
