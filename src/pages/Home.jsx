@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import bounty from 'bounty';
 import 'react-toastify/dist/ReactToastify.css';
@@ -18,6 +18,8 @@ function formatTime(date) {
 }
 
 const Home = () => {
+  const [isGithubHovered, setGithubHovered] = useState(false);
+  const [isInstagramHovered, setInstagramHovered] = useState(false);
   const [time, setTime] = useState(formatTime(new Date()));
   const [coordinates, setCoordinates] = useState('Adelaide ∘ 34.9285° S, 138.6007° E');
 
@@ -77,21 +79,31 @@ const Home = () => {
         <div><h2 className="centeredText" id='title'>Nireep Vishnubhatla</h2></div>
         <div><h3 className="centeredText" id='profession'>Aspiring Pen-Tester | Adelaide University</h3></div>
         <div className='centerDiv'>
-        <div id='socialDiv'>
-          <a href="https://github.com/NireepV" target="_blank" rel="noopener noreferrer">
-            <li className='socials'><img src="src/assets/github.png" className='socials'/></li>
-          </a>
-          <a href="https://www.instagram.com/nireepog" target="_blank" rel="noopener noreferrer">
-            <li className='socials'><img src="src/assets/Instagram.png" className='socials'/></li>
-          </a> 
-        </div>
-        <div id='emailDiv'>
-          <a href="/contactMe">
-            <li className='emailItem1'>Contact Me &#128225;</li>
-          </a>
-          <p className='emailText'>or</p>
-          <li className='emailItem2' onClick={copyEmailToClipboard}>Copy Email &#128233;</li>
-        </div>
+          <div id='socialDiv'>
+            <a href="https://github.com/NireepV" target="_blank" rel="noopener noreferrer">
+              <li className='socials'
+                onMouseEnter={() => setGithubHovered(true)}
+                onMouseLeave={() => setGithubHovered(false)}
+              >
+                <img src={isGithubHovered ? "src/assets/github.png" : "src/assets/githubUnselected.png"} className='socials' id='github' />
+              </li>
+            </a>
+            <a href="https://www.instagram.com/nireepog" target="_blank" rel="noopener noreferrer">
+              <li className='socials'
+                onMouseEnter={() => setInstagramHovered(true)}
+                onMouseLeave={() => setInstagramHovered(false)}
+              >
+                <img src={isInstagramHovered ? "src/assets/Instagram.png" : "src/assets/InstagramUnselected.png"} className='socials' id='instagram' />
+              </li>
+            </a>
+          </div>
+          <div id='emailDiv'>
+            <a href="/contactMe">
+              <li className='emailItem1'>Contact Me &#128225;</li>
+            </a>
+            <p className='emailText'>or</p>
+            <li className='emailItem2' onClick={copyEmailToClipboard}>Copy Email &#128233;</li>
+          </div>
         </div>
         <div>
           <div id='coordinatesDiv'>
