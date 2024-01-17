@@ -1,12 +1,32 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './style/Projects.css'
-const Projects = () =>{
+import image1 from '../assets/myHeadshot.png';
+
+const Projects = () => {
+  const [hovered, setHovered] = useState(null);
+  const [expanded, setExpanded] = useState(null);
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
   const projects = [
-    { title: 'Project 1', description: 'This is project 1.' },
-    { title: 'Project 2', description: 'This is project 2.' },
+    {
+      title: 'Project 1',
+      description: 'This is a short description of project 1.',
+      detailedDescription: 'This is a more detailed description of project 1.',
+      image: image1
+    },
+    {
+      title: 'Project 2',
+      description: 'This is a short description of project 2.',
+      detailedDescription: 'This is a more detailed description of project 2.',
+      image: image1
+    },
+    {
+      title: 'Project 2',
+      description: 'This is a short description of project 2.',
+      detailedDescription: 'This is a more detailed description of project 2.',
+      image: image1
+    },
   ];
 
   useEffect(() => {
@@ -43,11 +63,29 @@ const Projects = () =>{
       <div className={`bodyP ${scrollPosition > 50 ? 'visible' : 'hidden'}`}>
         <div className='projectContainer'>
           {projects.map((project, index) => (
-            <div key={index} className='project'>
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+            <div
+              key={index}
+              className={`project ${hovered === index ? 'hovered' : ''} ${expanded === index ? 'expanded' : ''}`}
+              onMouseEnter={() => setHovered(index)}
+              onMouseLeave={() => setHovered(null)}
+              onClick={() => setExpanded(expanded === index ? null : index)}
+            >
+              <div className="project-text">
+                <h3 className="project-text">{project.title}</h3>
+                <p className="project-text">{project.description}</p>
+              </div>
+              
+              <div className='project-expanded'>
+              {expanded === index && <hr />}
+                {project.image && (
+                  <div className="project-image">
+                    <img src={project.image} alt={project.title} />
+                  </div>
+                )}
+                {expanded === index && <p className='detailedDiscription'>{project.detailedDescription}</p>}
+              </div>
             </div>
-          ))}          
+          ))}
         </div>
       </div>
     </div>

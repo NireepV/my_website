@@ -1,4 +1,4 @@
-.primDiv{
+.primDiv {
     max-height: 100vh;
 }
 
@@ -11,54 +11,61 @@ h3.centeredTextP {
 }
 
 .bodyP {
+    max-width: 600px;
     display: grid;
-    grid-template-columns: repeat(1, minmax(200px, 1fr)); /* Adjust as needed */
+    grid-template-columns: repeat(1, minmax(200px, 1fr));
+    /* Adjust as needed */
     gap: 20px;
     transition: opacity 0.3s ease-in-out;
 }
 
 .centeredTextP {
     text-align: center;
-    margin-top: 20px; /* Adjust this value as needed */
+    margin-top: 20px;
+    /* Adjust this value as needed */
 }
 
 .centeredTextP.large {
     margin-bottom: 0;
-    font-size: 3em; /* Adjust this value as needed */
+    font-size: 3em;
+    /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
-  
+
 .centeredTextP.small {
     margin-bottom: 0;
-    font-size: 2em; /* Adjust this value as needed */
+    font-size: 2em;
+    /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
 
 .centeredTextP.large2 {
     margin-bottom: 15px;
-    font-size: 2em; /* Adjust this value as needed */
+    font-size: 2em;
+    /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
-  
+
 .centeredTextP.small2 {
     margin-top: 10px;
     margin-bottom: 15px;
-    font-size: 1.25em; /* Adjust this value as needed */
+    font-size: 1.25em;
+    /* Adjust this value as needed */
     transition: font-size 0.3s ease-in-out;
 }
-  
+
 .bodyP.hidden {
     box-sizing: border-box;
     width: 100%;
     opacity: 0;
-    padding-bottom: 20vh;
+    padding-bottom: 10vh;
 }
-  
+
 .bodyP.visible {
     box-sizing: border-box;
     width: 100%;
     opacity: 1;
-    padding-bottom: 20vh;
+    padding-bottom: 10vh;
 }
 
 .scrollText {
@@ -80,14 +87,81 @@ h3.centeredTextP {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 10px 20px; /* Adjust as needed */
+    padding: 10px 20px;
 }
 
 .project {
     width: 100%;
-    border: 1px solid #ccc; /* Adjust as needed */
     padding: 10px 20px;
     margin-bottom: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.project {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    white-space: pre-wrap;
+}
+
+.project-text {
+    margin-bottom: 0px;
     border-radius: 10px;
     text-align: center;
+}
+
+p.project-text{
+    margin-bottom: 10px;
+}
+
+.project.hovered .project-text {
+    border: none;
+}
+
+.project.hovered {
+    background-color: #fff;
+    color: #242424;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.project-image img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.project-image {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.project.expanded .project-image {
+    max-height: none;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.project.expanded {
+    background-color: #fff;
+    color: #242424;
+}
+
+hr {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    height: 2px;
+}
+
+.project-expanded {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.detailedDescription {
+    width: auto;
 }
