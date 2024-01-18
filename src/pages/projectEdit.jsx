@@ -126,8 +126,9 @@ const Edit = () => {
 
   return (
     <div className='primDiv'>
-      <form onSubmit={handleFormSubmit}>
+      <form onSubmit={handleFormSubmit} className='editForm'>
         <input
+          className='editForm'
           type="text"
           name="title"
           value={newProject.title}
@@ -136,6 +137,7 @@ const Edit = () => {
           required
         />
         <textarea
+          className='editForm'
           name="description"
           value={newProject.description}
           onChange={handleInputChange}
@@ -143,12 +145,14 @@ const Edit = () => {
           required
         />
         <input
+          className='editForm'
           name="image"
           type="file"
           onChange={handleInputChange}
           required
         />
         <textarea
+          className='editForm'
           name="detailedDescription"
           value={newProject.detailedDescription}
           onChange={handleInputChange}

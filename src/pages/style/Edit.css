@@ -1,5 +1,5 @@
 
-form {
+.editForm {
     margin: 20px auto;
     width: 100%;
     max-width: 600px;
@@ -9,10 +9,7 @@ form {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea {
+textarea.editForm, input.editForm {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
