@@ -1,16 +1,18 @@
 import './Navbar.css';
 import React, { useState } from 'react';
 import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [highlightedIcon, setHighlightedIcon] = useState(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   return (
     <div className='NavBarItems'>
       <li>
         <div
-          onClick={() => history.push('/')}
+          onClick={() => navigate('/')}
           title="Home"
         >
           <img
@@ -23,7 +25,7 @@ const Navbar = () => {
       </li>
       <li>
         <div
-          onClick={() => history.push('/AboutMe')}
+          onClick={() => navigate('/AboutMe')}
           title="About Me"
         >
           <img
@@ -36,7 +38,7 @@ const Navbar = () => {
       </li>
       <li>
         <div
-          onClick={() => history.push('/Projects')}
+          onClick={() => navigate('/Projects')}
           title="Projects"
         >
           <img
@@ -49,7 +51,7 @@ const Navbar = () => {
       </li>
       <li>
         <div
-          onClick={() => history.push('/ContactMe')}
+          onClick={() => navigate('/ContactMe')}
           title="Contact Me"
         >
           <img
