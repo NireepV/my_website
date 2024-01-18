@@ -80,7 +80,7 @@ const Home = () => {
         <div><h3 className="centeredText" id='profession'>Aspiring Pen-Tester | Adelaide University</h3></div>
         <div className='centerDiv'>
           <div id='socialDiv'>
-            <a href="https://github.com/NireepV" target="_blank" rel="noopener noreferrer">
+            <a onClick={() => window.open("https://github.com/NireepV", "_blank")} rel="noopener noreferrer" title="GitHub">
               <li className='socials'
                 onMouseEnter={() => setGithubHovered(true)}
                 onMouseLeave={() => setGithubHovered(false)}
@@ -88,7 +88,7 @@ const Home = () => {
                 <img src={isGithubHovered ? "src/assets/github.png" : "src/assets/githubUnselected.png"} className='socials' id='github' />
               </li>
             </a>
-            <a href="https://www.instagram.com/nireepog" target="_blank" rel="noopener noreferrer">
+            <a onClick={() => window.open("https://www.instagram.com/nireepog", "_blank")} rel="noopener noreferrer" title="Instagram">
               <li className='socials'
                 onMouseEnter={() => setInstagramHovered(true)}
                 onMouseLeave={() => setInstagramHovered(false)}
