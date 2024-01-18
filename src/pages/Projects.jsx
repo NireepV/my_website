@@ -1,6 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { getDatabase, ref as dbRef, onValue } from "firebase/database";
+import { app, db} from '../firebase';
+import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import './style/Projects.css'
-import image1 from '../assets/myHeadshot.png';
+
+const storage = getStorage(app);
+
 
 const Projects = () => {
   const [hovered, setHovered] = useState(null);
@@ -8,26 +13,30 @@ const Projects = () => {
   const [isIntersecting, setIsIntersecting] = useState(false);
   const ref = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
-  const projects = [
-    {
-      title: 'Project 1',
-      description: 'This is a short description of project 1.',
-      detailedDescription: 'This is a more detailed description of project 1.',
-      image: image1
-    },
-    {
-      title: 'Project 2',
-      description: 'This is a short description of project 2.',
-      detailedDescription: 'This is a more detailed description of project 2.',
-      image: image1
-    },
-    {
-      title: 'Project 2',
-      description: 'This is a short description of project 2.',
-      detailedDescription: 'This is a more detailed description of project 2.',
-      image: image1
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const storage = getStorage(app);
+    const databaseRef = dbRef(db, 'projects');
+  
+    const unsubscribe = onValue(databaseRef, (snapshot) => {
+      const data = snapshot.val();
+      const projectsArray = Object.keys(data).map(async (key) => {
+        const imageUrl = await getDownloadURL(storageRef(storage, data[key].image));
+        return {
+          id: key,
+          ...data[key],
+          image: imageUrl,
+        };
+      });
+      Promise.all(projectsArray).then(setProjects);
+    });
+  
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(
