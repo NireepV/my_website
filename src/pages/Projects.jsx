@@ -4,8 +4,6 @@ import { app, db} from '../firebase';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import './style/Projects.css'
 
-const storage = getStorage(app);
-
 
 const Projects = () => {
   const [hovered, setHovered] = useState(null);
