@@ -3,7 +3,7 @@ import { getDatabase, ref as dbRef, onValue, push, remove } from "firebase/datab
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { app, db } from '../firebase';
-import './style/Projects.css'
+import './style/Edit.css'
 
 const Edit = () => {
   const [projects, setProjects] = useState([]);
@@ -125,7 +125,7 @@ const Edit = () => {
   }
 
   return (
-    <div>
+    <div className='primDiv'>
       <form onSubmit={handleFormSubmit}>
         <input
           type="text"
@@ -160,7 +160,7 @@ const Edit = () => {
 
       {/* Display the projects */}
       {projects.map((project) => (
-        <div key={project.id}>
+        <div key={project.id} className="edit">
           <h2>{project.title}</h2>
           <p>{project.description}</p>
           <img src={project.image} alt={project.title} />
@@ -168,6 +168,7 @@ const Edit = () => {
           <button onClick={() => handleDelete(project.id)}>Delete</button>
         </div>
       ))}
+      <div className='emptyDiv'></div>
     </div>
   );
 };
