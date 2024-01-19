@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import bounty from 'bounty';
 import 'react-toastify/dist/ReactToastify.css';
 import './style/Toast.css'
@@ -22,6 +23,7 @@ function formatTime(date) {
 }
 
 const Home = () => {
+  const navigate = useNavigate();
   const [isGithubHovered, setGithubHovered] = useState(false);
   const [isInstagramHovered, setInstagramHovered] = useState(false);
   const [time, setTime] = useState(formatTime(new Date()));
@@ -102,11 +104,11 @@ const Home = () => {
             </a>
           </div>
           <div id='emailDiv'>
-            <a href="/ContactMe" onClick={() => navigate('/ContactMe')}>
-              <li className='emailItem1'>Contact Me &#128225;</li>
-            </a>
+            <button className='emailItem1' onClick={() => navigate('/ContactMe')}>
+              <li>Contact Me &#128225;</li>
+            </button>
             <p className='emailText'>or</p>
-            <li className='emailItem2' onClick={copyEmailToClipboard}>Copy Email &#128233;</li>
+            <button className='emailItem2' onClick={copyEmailToClipboard}>Copy Email &#128233;</button>
           </div>
         </div>
         <div>
