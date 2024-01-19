@@ -6,3 +6,27 @@ body {
   height: 100vh;
   margin: 0;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #242424;
+  border-left: 1px solid rgba(240, 248, 255, 0.548);
+  box-shadow: -2px 0 10px rgba(240, 248, 255, 0.548);
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
