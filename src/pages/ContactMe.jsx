@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { toast, ToastContainer } from 'react-toastify';
+import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import './style/ContactMe.css';
 
@@ -39,6 +40,18 @@ const ContactMe = () =>{
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
+
+  const handleSendEmail = async (event) => {
+    event.preventDefault();
+  
+    try {
+      const response = await axios.post('http://localhost:5000/send', formValues);
+      console.log(response.data.message);
+      toast("Email Has Been Sent! 🥳🎉");
+    } catch (error) {
+      toast("There Has Been A Mistake! 😓");
+    }
+  };
   
   return (
     <div className='primDiv'>
@@ -58,7 +71,7 @@ const ContactMe = () =>{
           <div className='textareaWrapper'>
             <textarea name="content" id="content" cols="30" rows="10" placeholder="Type Away My Fellow Email Enthusist ....." value={formValues.content} onChange={handleInputChange} onFocus={() => setIsFocused(true)} onBlur={() => setIsFocused(false)} />
           </div>
-          <button className='sendEmail' type='submit' onClick={() => toast("Email Has Been Sent! 🥳🎉")}>Send &#128228;</button>
+          <button className='sendEmail' type='submit' onClick={handleSendEmail}>Send &#128228;</button>
         </div>
         <div className='liveTracking'>
           <h4 className='LTelement'>Watched Values Updated Live:</h4>
