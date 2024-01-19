@@ -102,7 +102,7 @@ const Home = () => {
             </a>
           </div>
           <div id='emailDiv'>
-            <a href="/contactMe">
+            <a href="/ContactMe" onClick={() => navigate('/ContactMe')}>
               <li className='emailItem1'>Contact Me &#128225;</li>
             </a>
             <p className='emailText'>or</p>
