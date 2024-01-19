@@ -5,6 +5,10 @@ import 'react-toastify/dist/ReactToastify.css';
 import './style/Toast.css'
 import myPicture from '../assets/myHeadshot.png';
 import './style/Home.css'
+import githubUS from '../assets/githubUnselected.png';
+import github from '../assets/github.png';
+import instagramUS from '../assets/InstagramUnselected.png';
+import instagram from '../assets/Instagram.png';
 
 const email = "Nireep.Vishnubhatla@gmail.com";
 
@@ -85,7 +89,7 @@ const Home = () => {
                 onMouseEnter={() => setGithubHovered(true)}
                 onMouseLeave={() => setGithubHovered(false)}
               >
-                <img src={isGithubHovered ? "src/assets/github.png" : "src/assets/githubUnselected.png"} className='socials' id='github' />
+                <img src={isGithubHovered ? github : githubUS} className='socials' id='github' />
               </li>
             </a>
             <a onClick={() => window.open("https://www.instagram.com/nireepog", "_blank")} rel="noopener noreferrer" title="Instagram">
@@ -93,7 +97,7 @@ const Home = () => {
                 onMouseEnter={() => setInstagramHovered(true)}
                 onMouseLeave={() => setInstagramHovered(false)}
               >
-                <img src={isInstagramHovered ? "src/assets/Instagram.png" : "src/assets/InstagramUnselected.png"} className='socials' id='instagram' />
+                <img src={isInstagramHovered ? instagram : instagramUS} className='socials' id='instagram' />
               </li>
             </a>
           </div>
