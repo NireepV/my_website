@@ -19,6 +19,7 @@ const Navbar = () => {
 
   return (
     <div className='NavBarItems'>
+      <button onClick={() => navigate('/Edit')} className="add-project-button"></button>
       <li>
         <div
           onClick={() => navigate('/')}
@@ -51,7 +52,7 @@ const Navbar = () => {
           title="Projects"
         >
           <img
-            src={location.pathname === '/Projects' || highlightedIcon === 'projects' ? projects : projectsUS }
+            src={location.pathname === '/Projects' || highlightedIcon === 'projects' ? projects : projectsUS}
             className={`NavIcon ${highlightedIcon === 'projects' ? 'highlighted' : ''}`}
             onMouseEnter={() => setHighlightedIcon('projects')}
             onMouseLeave={() => setHighlightedIcon(null)}
