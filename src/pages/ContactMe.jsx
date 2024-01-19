@@ -45,7 +45,7 @@ const ContactMe = () =>{
     event.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:5000/send', formValues);
+      const response = await axios.post('https://65aa0680a881420008d1522e--gleeful-khapse-f82b68.netlify.app/send', formValues);
       console.log(response.data.message);
       toast("Email Has Been Sent! 🥳🎉");
     } catch (error) {
