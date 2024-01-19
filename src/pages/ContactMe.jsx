@@ -45,7 +45,7 @@ const ContactMe = () =>{
     event.preventDefault();
   
     try {
-      const response = await axios.post('http://localhost:5000/send', formValues);
+      const response = await axios.post('/send', formValues);
       console.log(response.data.message);
       toast("Email Has Been Sent! 🥳🎉");
     } catch (error) {
